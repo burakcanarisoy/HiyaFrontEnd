@@ -15,22 +15,22 @@ export default function Home() {
       <div className="scrollytelling-section">
         <Hero />
       </div>
-      <div className="scrollytelling-section">
+      <div id="problem-highlight" className="scrollytelling-section">
         <ProblemHighlight />
       </div>
-      <div className="scrollytelling-section">
+      <div id="hiya-solution" className="scrollytelling-section">
         <HiyaSolution />
       </div>
-      <div className="scrollytelling-section">
+      <div id="how-it-works" className="scrollytelling-section">
         <HowItWorks />
       </div>
-      <div className="scrollytelling-section">
+      <div id="product-teasers" className="scrollytelling-section">
         <ProductTeasers />
       </div>
-      <div className="scrollytelling-section">
+      <div id="social-proof" className="scrollytelling-section">
         <SocialProof />
       </div>
-      <div className="scrollytelling-section">
+      <div id="why-hiya" className="scrollytelling-section">
         <WhyHiya />
       </div>
       <div className="scrollytelling-section">

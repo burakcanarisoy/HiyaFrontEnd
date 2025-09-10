@@ -1,4 +1,4 @@
-// src/components/Hero.tsx
+// src/components/ProblemHighlights.tsx
 "use client";
 
 import { GradualSpacing } from '@/components/ui/gradual-spacing';
@@ -34,7 +34,7 @@ export default function ProblemHighlight() {
               text={"Feeling dismissed? You are not alone."}
               className="font-butler text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight max-w-[90vw] sm:max-w-[600px]"
               duration={0.2}
-              delayMultiple={0.04}
+              delayMultiple={0.02}
               framerProps={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },

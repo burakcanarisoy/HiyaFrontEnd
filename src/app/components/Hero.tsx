@@ -2,14 +2,78 @@
 "use client";
 
 import Logo from "@/images/logo1.png";
+import PrimaryLogo from "@/images/primary-logo-1.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { GradualSpacing } from "@/components/ui/gradual-spacing";
+import Link from "next/link";
 
 export default function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     // Ana section: her zaman flex-row -> solda başlık, sağda butonlar
-    <section className="relative bg-hiya-beige min-h-screen overflow-hidden flex flex-row items-center justify-center px-4 sm:px-6 lg:px-12 py-12 gap-6">
+    <section className="relative bg-hiya-beige min-h-screen overflow-hidden flex flex-col px-4 sm:px-6 lg:px-6 py-0">
+      {/* Top Navigation Bar */}
+      <motion.div 
+        className="w-full flex flex-row justify-between items-center py-2 mb-0"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          There'll be logo here
+        </div>
+        
+        {/* Navigation Buttons */}
+        <div className="hidden md:flex space-x-6 items-center">
+          <button 
+            onClick={() => scrollToSection('problem-highlight')} 
+            className="text-hiya-dark hover:text-hiya-terracotta transition font-medium"
+          >
+            Problem Highlight
+          </button>
+          <button 
+            onClick={() => scrollToSection('hiya-solution')} 
+            className="text-hiya-dark hover:text-hiya-terracotta transition font-medium"
+          >
+            Hiya Solution
+          </button>
+          <button 
+            onClick={() => scrollToSection('how-it-works')} 
+            className="text-hiya-dark hover:text-hiya-terracotta transition font-medium"
+          >
+            How It Works
+          </button>
+          <button 
+            onClick={() => scrollToSection('product-teasers')} 
+            className="text-hiya-dark hover:text-hiya-terracotta transition font-medium"
+          >
+            Product Teasers
+          </button>
+          <button 
+            onClick={() => scrollToSection('social-proof')} 
+            className="text-hiya-dark hover:text-hiya-terracotta transition font-medium"
+          >
+            Social Proof
+          </button>
+          <button 
+            onClick={() => scrollToSection('why-hiya')} 
+            className="text-hiya-dark hover:text-hiya-terracotta transition font-medium"
+          >
+            Why Hiya
+          </button>
+        </div>
+      </motion.div>
+      
+      {/* Main Hero Content */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 flex-grow">
       
       {/* Left Grid: Heading */}
       <div className="flex-1 flex items-center justify-center text-left">
@@ -63,6 +127,7 @@ export default function Hero() {
         <span className="bg-hiya-beige/90 text-xs sm:text-sm font-light px-4 py-1 rounded-t-lg border-t border-hiya-brown shadow-md w-full max-w-[600px] text-center">
           Home testing coming soon. Nurse and lab options available now.
         </span>
+      </div>
       </div>
       </div>
 
