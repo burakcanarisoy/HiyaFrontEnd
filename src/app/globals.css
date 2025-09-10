@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
 }
@@ -11,18 +12,4 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-}
-
-.scrollytelling-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-.scrollytelling-section {
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
